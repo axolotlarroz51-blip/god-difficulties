@@ -2,20 +2,14 @@ name: Build Geode Mod
 on:
   push:
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Geode CLI
-        uses: geode-sdk/setup-cli@v2
-      - name: Install SDK
-        run: geode sdk install --force
-      - name: Build
-        run: geode build --platform android64
-      - name: Upload
-        uses: actions/upload-artifact@v4
+      - name: Build Android Mod
+        uses: geode-sdk/build-mod@v1
         with:
-          name: god-difficulties
-          path: build/*.geode
+          cli: nightly
+          platform: android64
+          combine: false
