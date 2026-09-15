@@ -1,10 +1,17 @@
 {
-  "geode": "4.9.0",
+  "geode": "4.10.0",
   "gd": "*",
   "id": "axolotlarroz51-blip.god-difficulties",
-  "name": "God Difficulties",
   "version": "v1.0.0",
+  "name": "God Difficulties",
   "developers": ["axolotlarroz51"],
-  "description": "Adds GOD difficulty",
-  "repository": "https://github.com/axolotlarroz51-blip/god-difficulties"
+  "description": "Adds Peaceful, Impossible, Ultra and GOD",
+  "resources": {
+    "files": [
+      "resources/god.png",
+      "resources/peaceful_demon.png",
+      "resources/impossible_demon.png",
+      "resources/ultra_demon.png"
+    ]
+  }
 }
