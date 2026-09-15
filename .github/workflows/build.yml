@@ -1,24 +1,21 @@
 name: Build Geode Mod
-on: [push, workflow_dispatch]
+on:
+  push:
+  workflow_dispatch:
+
 jobs:
   build:
-    strategy:
-      matrix:
-        config:
-          - { name: "Android64", platform: "android64" }
-          - { name: "Windows", platform: "win" }
-    name: ${{ matrix.config.name }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup Geode CLI
-        uses: geode-sdk/setup-cli@v1
+        uses: geode-sdk/setup-cli@v2
+      - name: Install SDK
+        run: geode sdk install --force
       - name: Build
-        run: |
-          geode sdk install --force
-          geode build --platform ${{ matrix.config.platform }}
-      - name: Upload artifact
+        run: geode build --platform android64
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: god-difficulties-${{ matrix.config.platform }}
+          name: god-difficulties
           path: build/*.geode
