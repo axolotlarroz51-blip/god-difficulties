@@ -4,6 +4,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(god-difficulties VERSION 1.0.5 LANGUAGES CXX)
 
+if (DEFINED ENV{GEODE_SDK})
+    list(APPEND CMAKE_PREFIX_PATH "$ENV{GEODE_SDK}")
+endif()
+
 find_package(Geode REQUIRED)
 
 add_library(${PROJECT_NAME} SHARED
