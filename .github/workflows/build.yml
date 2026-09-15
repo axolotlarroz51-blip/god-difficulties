@@ -1,15 +1,19 @@
 name: Build Geode Mod
+
 on:
   push:
-  workflow_dispatch:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build Android Mod
-        uses: geode-sdk/build-mod@v1
+      
+      - name: Build Geode Mod
+        uses: geode-sdk/build-geode-mod@v2
         with:
+          combine: true
           cli: nightly
-          platform: android64
-          combine: false
