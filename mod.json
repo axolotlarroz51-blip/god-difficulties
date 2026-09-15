@@ -6,7 +6,7 @@
 		"mac": "2.2081"
 	},
 	"id": "axolotla1231-blip.god-difficulties",
-	"name": "GOD Difficulties",
+	"name": "GOD Difficulty",
 	"version": "v1.0.5",
 	"developer": "axolotla1231-blip",
 	"description": "GOD difficulty for PC & Android",
@@ -19,7 +19,11 @@
 	],
 	"resources": {
 		"files": [
-			"logo.png"
+			"logo.png",
+			"1789487486240.png",
+			"1789487493184.png",
+			"1789487503657.png",
+			"1789487508957.png"
 		]
 	}
 }
