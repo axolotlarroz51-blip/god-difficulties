@@ -1,19 +1,25 @@
 {
-	"geode": ">=4.0.0",
+	"geode": "5.10.1",
 	"gd": {
-		"win": "*",
-		"android": "*",
-		"mac": "*"
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081"
 	},
 	"id": "axolotla1231-blip.god-difficulties",
 	"name": "GOD Difficulties",
-	"version": "v1.0.4",
+	"version": "v1.0.5",
 	"developer": "axolotla1231-blip",
-	"description": "Adds the GOD difficulty - Harder than Extreme Demon! Works on PC & Mobile",
-	"logo": "logo.png",
-	"tags": ["gameplay", "customization"],
-	"dependencies": [],
+	"description": "GOD difficulty for PC & Android",
+	"issues": {
+		"info": "Si tienes problemas con el mod, contacta al creador."
+	},
+	"tags": [
+		"gameplay",
+		"interface"
+	],
 	"resources": {
-		"files": ["logo.png"]
+		"files": [
+			"logo.png"
+		]
 	}
 }
