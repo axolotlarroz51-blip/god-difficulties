@@ -1,12 +1,10 @@
 {
-  "geode": "4.2.0",
-  "gd": "2.2081",
-  "id": "com.tunombre.god-difficulties",
+  "geode": "4.9.0",
+  "gd": "*",
+  "id": "axolotlarroz51-blip.god-difficulties",
   "name": "God Difficulties",
   "version": "v1.0.0",
-  "developer": "TuNombre",
-  "description": "Anade Peaceful, Impossible, Ultra y God detectando [GOD] en el nombre",
-  "resources": {
-    "sprites": ["resources/*.png"]
-  }
+  "developers": ["axolotlarroz51"],
+  "description": "Adds GOD difficulty",
+  "repository": "https://github.com/axolotlarroz51-blip/god-difficulties"
 }
