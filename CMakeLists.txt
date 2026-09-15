@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.21)
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
-project(GodDifficulties VERSION 1.0.0)
+project(god-difficulties VERSION 1.0.0)
+
 add_library(${PROJECT_NAME} SHARED src/main.cpp)
-if (NOT DEFINED ENV{GEODE_SDK})
-    message(FATAL_ERROR "Unable to find Geode SDK!")
+
+if(NOT DEFINED CMAKE_CXX_VISIBILITY_PRESET)
+    set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 endif()
-add_subdirectory($ENV{GEODE_SDK} ${CMAKE_BINARY_DIR}/geode)
-setup_geode_mod(${PROJECT_NAME})
+
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
+
+include(Geode.cmake)
