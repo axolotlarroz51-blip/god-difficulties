@@ -3,15 +3,14 @@ using namespace geode::prelude;
 #include <Geode/modify/GJDifficultySprite.hpp>
 
 class $modify(GODDiff, GJDifficultySprite) {
-    bool init(int diff, GJDifficultyName name, bool feature) {
-        if (!GJDifficultySprite::init(diff, name, feature)) return false;
+    bool init(int diff, GJDifficultyName name) {
+        if (!GJDifficultySprite::init(diff, name)) return false;
 
         std::string file = "";
-        // Tus 4 caras GOD
-        if (diff == 1) file = "1789487493184.png"_spr; // Peaceful rosita
-        if (diff == 2) file = "1789487508957.png"_spr; // GOD
-        if (diff == 3) file = "1789487486240.png"_spr; // Impossible
-        if (diff == 4) file = "1789487503657.png"_spr; // Ultra / negra
+        if (diff == 1) file = "1789487493184.png"_spr;
+        if (diff == 2) file = "1789487508957.png"_spr;
+        if (diff == 3) file = "1789487486240.png"_spr;
+        if (diff == 4) file = "1789487503657.png"_spr;
         if (diff == 5) file = "1789487508957.png"_spr;
 
         if (!file.empty()) {
