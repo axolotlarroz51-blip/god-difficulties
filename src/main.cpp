@@ -2,5 +2,5 @@
 using namespace geode::prelude;
 
 $on_mod(Loaded) {
-    log::info("God Difficulties loaded");
+    log::info("God Difficulties loaded!");
 }
